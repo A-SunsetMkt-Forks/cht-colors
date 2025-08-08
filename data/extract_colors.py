@@ -63,12 +63,12 @@ for dl in color_list_div.find_all("dl"):
         print(f"WARNING: name={name} rgb_literal({value_rgb})!=background_color({box_rgb})")
     if hex_to_rgb(value_hex) != value_rgb:
         print(f"WARNING: name={name} rgb_literal=({value_rgb})!=hex({value_hex}={hex_to_rgb(value_hex)})")
-    if name_pinyin in pinyin_dict:
-        print(f"WARNING: Conflict pinyin {pinyin_dict[name_pinyin]} / {name}")
 
     # Detect pinyin conflict
     # Conflicted pinyin is curated in preset_pinyins
     curated_pinyin = preset_pinyins.get(name, name_pinyin)
+    if curated_pinyin in pinyin_dict:
+        print(f"WARNING: Conflict pinyin {pinyin_dict[curated_pinyin]} / {name}")
     pinyin_dict[curated_pinyin] = name
 
     colors.append({
