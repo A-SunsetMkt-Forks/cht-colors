@@ -18,6 +18,16 @@ it's time to refine this website and make it accessible again.
 
 ---
 
+DATA
+
+Hex code of colors are also stored in JSON and SCSS format for programmatic usage:
+
+- [cht-colors.json](./data/cht-colors.json): `{"粉紅": "#ffb3a7", ...}`
+- [cht-colors-pinyin.json](./data/cht-colors-pinyin.json): `{"fenhong": "#ffb3a7", ...}`
+- [cht-colors-pinyin.scss](./data/cht-colors-pinyin.scss): `$FENHONG: #ffb3a7;`
+
+---
+
 TODO
 - [x] responsive
   - [x] main
